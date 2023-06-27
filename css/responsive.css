@@ -1,0 +1,139 @@
+/* ===== laptop screen ===== */
+@media (max-width: 1160px){
+    .carousel-item{
+        height: 500px;
+    }
+    .work_item_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .project_item_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+    }
+    .section_common_heading .section_details>p{
+        padding: 0 80px;
+    }
+    .footer_contact_wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+    .contact_item{
+        text-align: center;
+    }
+    .contact_item .contact_method{
+        display: inline-block;
+        padding-right: 20px;
+    }
+    .about_item{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .service_item_wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+/* ===== laptop screen ===== */
+/* ===== Tab screen ===== */
+@media (max-width: 792px){
+    .carousel-item{
+        height: 300px;
+    }
+    .project_item_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 30px;
+    }
+    .work_item_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .section_common_heading .section_heading>h2{
+        font-family: var(--primary-font);
+        font-weight: 500;
+        font-size: 25px;
+        color: #555;
+        padding-bottom: 25px;
+    }
+    .section_common_heading .section_details>p{
+        padding: 0 60px;
+    }
+    .footer_contact_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .copyright_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+    }
+    .contact_item{
+        text-align: center;
+    }
+    .contact_item .contact_method{
+        display: block;
+        padding-right: unset;
+    }
+    .about_item{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .service_item_wrapper{
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+/* ===== Tab screen ===== */
+/* ===== Mobile screen ===== */
+@media (max-width: 600px){
+    .carousel-item{
+        height: 200px;
+    }
+    .footer_contact_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section_common_heading .section_details>p{
+        padding: 0 30px;
+    }
+    .copyright_wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .contact_item p{
+        text-align: center;
+    }
+    .contact_item .contact_method{
+        display: block;
+        padding-right: unset;
+    }
+    .about_item{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .service_item_wrapper{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+/* ===== Mobile screen ===== */
+
+/* ===== Desing by Ajoy Saha ===== */

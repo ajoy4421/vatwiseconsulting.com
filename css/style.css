@@ -1,0 +1,590 @@
+/* ===== common css start ===== */
+:root{
+    --primary-color: #998675;
+    --secondary-color: #fff;
+    --primary-font: 'Raleway', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;    
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ol,ul,li{
+    list-style-type: none;
+}
+ol,ul{
+    padding-left: 0;
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+h1,h2,h3,h4,h5,h5,h6,p{
+    line-height: 0.8;
+}
+i{
+    cursor: pointer;
+}
+html,body{
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+}
+.container{
+    max-width: 1320px;
+    margin: 0 auto;
+}
+.section_common_heading{
+    text-transform: capitalize;
+    text-align: center;
+}
+.section_common_heading .section_heading>h2{
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 30px;
+    color: #555;
+    padding-bottom: 25px;
+    text-transform: capitalize;
+    line-height: 1.5;
+    position: relative;
+}
+.section_heading>h2::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100px;
+    border-radius: 3px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--primary-color);
+    
+}
+.section_common_heading .section_details>p{
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 17px;
+    color: #484848;
+    padding: 0 100px;
+    line-height: 25px;
+    text-transform: capitalize;
+    padding-bottom: 40px;
+}
+/* ===== common css end ====== */
+/* ===== navbar start here ===== */
+#navbar{
+    width: 100%;
+    padding: 15px 0;
+    position: sticky;
+    left: 0;
+    top: 0;
+    background-color: var(--secondary-color);
+    z-index: 999;
+}
+.navbar-brand{
+    width: 220px;
+    height: 60px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+.navbar-brand  img{
+    width: 100%;
+    height: 100%;
+}
+.menu>ul{
+    column-gap: 30px;
+    flex-wrap: wrap;
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+}
+.menu>ul>li>a{
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 16px;
+    color: #333;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    position: relative;
+}
+.menu>ul>li>a::after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform: scale(0);
+    transform-origin: left;
+    transition: all 0.3s linear;
+}
+.menu>ul>li>a:hover::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+.menu>ul>li>a:hover{
+    color: var(--primary-color);
+}
+/* navbar end here */
+/* ===== banner section start here ===== */
+.carousel-item{
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-item img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* ===== banner section end here ===== */
+/* ===== work section start here ===== */
+#work{
+    padding-top: 80px;
+}
+.work_item_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 40px;
+}
+.work_item{
+    width: 270px;
+    text-align: center;
+}
+.work_icon>i{
+    font-size: 42px;
+    color: #555;
+    padding-bottom: 30px;
+    transition: all 0.3s linear;
+}
+.work_heading>h2{
+    font-family: var(--primary-font);
+    font-size: 22px;
+    font-weight: 600;
+    color: #555;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+    transition: all 0.3s linear;
+}
+.work_details>p{
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #8c8c8c;
+    padding: 0 10px;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: capitalize;
+}
+.work_details>p::after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 70px;
+    background-color: #f1eee9;
+    left: 50%;
+    top: 70px;
+    transform: translateX(-50%);
+    transition: all 0.3s linear;
+}
+.work_item:hover 
+.work_icon>i,
+.work_item:hover 
+.work_heading>h2{
+    color: #c7b299;
+}
+.work_item:hover .work_details>p::after{
+    background-color: #c7b299;
+}
+/* ===== work section end here ===== */
+/* ===== projects section start here ===== */
+#projects{
+    padding: 70px 0 30px 0;
+}
+.projects_sec_wrapper{
+    text-align: center;
+}
+.project_item_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    margin: 50px 0;
+}
+.project_item{
+    width: 370px;
+    background-color: #fbfaf8;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s linear;
+}
+.project_item .project_img{
+    width: 100%;
+    height: 238px;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+}
+.project_item .project_img>img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(17, 17, 17, 0.7),rgba(17, 17, 17, 0.7));
+    transition: all 0.3s linear;
+    transform: scale(0);
+    z-index: 444;
+}
+.project_item:hover .overlay, .post_item:hover .overlay{
+    transform: scale(1);
+    
+}
+.project_item .project_img .overlay .overlay_icon_group{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: all 0.3s linear;
+}
+.project_item .project_img .overlay .overlay_icon_group .overlay_icon a{
+    font-size: 25px;
+    color: var(--secondary-color);
+    transition: all 0.3s linear;
+}
+.project_item .project_img .overlay .overlay_icon_group .overlay_icon a:hover{
+    color: #c7b299;
+}
+.project_item:hover{
+    background-color: #362f2d;
+}
+.project_item:hover .project_details::after{
+    background-color: #362f2d;
+}
+.project_details{
+    text-align: left;
+    margin: 30px;
+    position: relative;
+    transition: all 0.3s linear;
+    z-index: 444;
+
+}
+.project_details>h3{
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 500;
+    color: #c7b299;
+    padding-bottom: 14px;
+    text-transform: capitalize;
+}
+.project_details>p{
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    font-weight: 300;
+    color: #d1d1d1;
+    line-height: 1.5;
+    text-transform: capitalize;
+}
+.project_details::after{
+    position: absolute;
+    content: "";
+    clip-path: polygon(50% 55%, 0 100%, 100% 100%);
+    top: -59px;
+    left: -10px;
+    background-color: #fbfaf8;
+    height: 30px;
+    width: 30px;
+    transition: all 0.3s linear;
+    z-index: 555;
+}
+/* ===== projects section end here ===== */
+/* ===== about section start here ===== */
+#about{
+    width: 100%;
+    padding: 70px 0;
+}
+#about .section_heading h2,
+#client .section_heading h2,
+#service .section_heading h2{
+    font-weight: 700;
+    font-size: 35px;
+    color: #333;
+    text-transform: uppercase;
+}
+#about .section_details{
+    padding: 20px 0;
+}
+.about_wrapper{
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+    gap: 50px;
+}
+.about_item{
+    width: 50%;
+    margin: 0 auto;
+}
+.about_item h3{
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    font-weight: 600;
+    color: #d9a566;
+    
+}
+.about_item ol li{
+    list-style-type: disc;
+    padding: 5px 0;
+    font-family: var(--secondary-font);
+    font-size: 16px;
+    font-weight: 300;
+    color: #2d2d2d;
+    line-height: 1.5;
+}
+/* ===== about section start here ===== */
+/* ===== service section end here ===== */
+#service{
+    width: 100%;
+    padding: 70px 0;
+}
+.service_item_wrapper{
+    width: 70%;
+    margin: 0 auto;
+}
+.service_item{
+    border-bottom: 2px solid #736357;
+    text-transform: unset;
+    padding: 60px 0 20px 0;
+}
+.service_item .service_heading h3{
+    padding-bottom: 20px;
+    font-family: var(--primary-font);
+    font-size: 25px;
+    font-weight: 700;
+    color: #d9a566;
+}
+.service_item .service_heading h4{
+    padding-bottom: 15px;
+    font-family: var(--primary-font);
+    font-size: 20px;
+    font-weight: 500;
+    color: #2d2d2d;
+    line-height: 1.5;
+}
+.service_details ul li,
+.service_details ol li{
+    padding: 10px 0;
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    font-weight: 300;
+    color: #2d2d2d;
+    line-height: 1.5;
+}
+.service_details ul li span{
+    font-weight: 600;
+}
+.service_details ol li{
+    font-weight: 600;
+    list-style-type: disc;
+    padding: unset;
+    padding: 5px 0;
+    margin-left: 20px;
+}
+
+/* ===== service section end here ===== */
+/* ===== client section end here ===== */
+#client{
+    width: 100%;
+    padding: 70px 0;
+}
+.client_group_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 50px;
+}
+.client_item{
+    width: 600px;
+    border-radius: 10px;
+    border-top: 1px solid #555;
+    padding: 20px 20px 15px 20px;
+    box-shadow: 2px 5px 5px #555;
+    transition: all 0.3s linear;
+}
+.client_item:hover{
+    background-color: var(--primary-color);
+}
+.client_item:hover .client_name{
+    color: var(--secondary-color);
+}
+.client_item .client_name{
+    font-family: var(--primary-font);
+    font-size: 22px;
+    font-weight: 500;
+    color: #191919;
+    padding-bottom: 10px;
+    line-height: 1.5;
+    transition: all 0.3s linear;
+}
+.client_item .client_name span{
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.client_item p{
+    font-family: var(--secondary-font);
+    font-size: 18px;
+    font-weight: 300;
+    color: #2d2d2d;
+    line-height: 1.5;
+    transition: all 0.3s linear;
+}
+.client_item p span{
+    font-weight: 600;
+    text-transform: capitalize;
+}
+/* ===== client section end here ===== */
+/* ===== footer section start here ===== */
+.main_footer{
+    width: 100%;
+    padding: 40px 0 20px 0;
+    background-color: #191919;
+}
+.footer_contact_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}
+.contact_item{
+    width: 50%;
+    padding-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact_item h2{
+    font-family: var(--primary-font);
+    font-weight: 600;
+    font-size: 28px;
+    color: #ddd;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+.contact_item address,
+.contact_item p{
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    font-size: 18px;
+    color: #959595;
+    line-height: 150%;
+    transition: all 0.3s linear;
+    cursor: text;
+}
+.contact_item address{
+    text-transform: capitalize;
+}
+.contact_item address:hover,
+.contact_item p:hover{
+    color: var(--secondary-color);
+}
+.contact_item .contact_method{
+    display: inline-block;
+    padding-right: 20px;
+}
+
+/* ===== copyright part start ===== */
+.copyright{
+    width: 100%;
+    padding: 30px 0;
+    background-color: #111111;
+}
+.copyright_wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+}
+.copyright_item a,
+.copyright_item p{
+    color: #5e5e5e;
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 14px;
+    transition: all 0.3s linear;
+    text-transform: capitalize;
+}
+.copyright_item a:hover{
+    color: #c7b299;
+}
+.copyright_item p{
+    margin-bottom: 0;
+}
+.copyright_item .slogan:hover{
+    color: var(--secondary-color);
+}
+.copyright_item .developer{
+    color: #959595;
+    transition: all 0.3s linear;
+}
+.copyright_item .developer span span{
+    text-transform: uppercase;
+}
+.copyright_item .developer span{
+    transition: all 0.3s linear;
+}
+.copyright_item .developer:hover span{
+    color: var(--secondary-color);
+}
+.social_link_group{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.social_link{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d1d1d1;
+    border-radius: 5px;
+}
+.social_link a{
+    color: #000;
+    font-size: 15px;
+    transition: all 0.3s linear;
+}
+.social_link a:hover{
+    color: #736357;
+}
+/* ===== footer section end here ===== */
+/* ===== css end here ===== */
+
+/* ===== Desing by Ajoy Saha ===== */
+
