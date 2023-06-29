@@ -361,6 +361,9 @@ img{
     color: #2d2d2d;
     line-height: 1.5;
 }
+.about_item ol li span{
+    font-weight: 600;
+}
 /* ===== about section start here ===== */
 /* ===== service section end here ===== */
 #service{
@@ -382,6 +385,7 @@ img{
     font-size: 25px;
     font-weight: 700;
     color: #d9a566;
+    line-height: 1.5;
 }
 .service_item .service_heading h4{
     padding-bottom: 15px;
